@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  div(class='container')
+    table(class=['table','is-bordered', 'is-striped','is-fullwidth'])
+      thead
+        tr
+          th= 'ID'
+          th= 'ITEM NAME'
+          th= 'SELLER ID'
+          th= 'BIDS'
+      tbody
+       each row in rows
+        tr
+          td= row.id
+          td= row.name
+          td= row.seller_id
+          td= row.bids
