@@ -1,13 +1,18 @@
 var express = require('express');
 var router = express.Router();
-var db = require('../module/mysql');
+
+var uCntr = require('../controller/userCntr');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  db.query("SELECT * FROM items ORDER BY id",function(err,data){
-    if(err) throw err;
-    res.render('tmpl/users', { title: 'Alam', rows: data});
-  });
-});
+router.get('/', uCntr.users); // http://localhost:3000/users
+router.get('/:id', uCntr.getByID); // http://localhost:3000/users/:id
+
+//Edit
+router.get('/edit/:id', uCntr.edit ); //http://localhost:3000/users/edit/:id
+router.post('/edit/:id', uCntr.update); //http://localhost:3000/users/edit/:id
+
+//Delete
+router.get('/delete/:id', uCntr.delete); //http://localhost:3000/users/delete/:id
+
 
 module.exports = router;

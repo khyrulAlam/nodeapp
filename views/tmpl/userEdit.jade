@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+  div(class='container')
+    h3(class='title is-4')= title
+    form(method='post', action='/users/edit/#{row.id}')
+      div(class='field')
+        label(class="label")= "Item Name"
+        div(class="control")
+          input(class='input', type='text', placeholder='Text input', name='name', value='#{row.name}')
+      div(class='field')
+        label(class="label")= "Seller Id"
+        div(class="control")
+          input(class='input', type='number', placeholder='Text input', name='seller_id', value='#{row.seller_id}')
+      div(class='field')
+        label(class="label")= "Bids"
+        div(class="control")
+          input(class='input', type='number', placeholder='Text input', name='bids', value='#{row.bids}')
+      div(class=['field', 'is-grouped'])
+        div(class="control")
+          button(class=["button", "is-success"])= "Submit"
+        div(class="control")
+          button(class=["button", "is-link"])= "Cancel"

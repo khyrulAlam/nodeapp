@@ -9,10 +9,19 @@ block content
           th= 'ITEM NAME'
           th= 'SELLER ID'
           th= 'BIDS'
+          th= 'ACTION'
       tbody
        each row in rows
         tr
-          td= row.id
+          td= count++
           td= row.name
           td= row.seller_id
           td= row.bids
+          td
+            div(class=['has-text-centered'])
+              a(class='tag is-success',href='users/#{row.id}')
+                span(class='icon')
+                  i(class=['fa','fa-edit'])
+              a(class='tag is-danger',href='users/delete/#{row.id}', onclick="return askdelete()")
+                span(class='icon')
+                  i(class=['fa','fa-trash'])

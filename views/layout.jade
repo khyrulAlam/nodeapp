@@ -7,11 +7,14 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css')
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    script(src="/javascripts/main.js")
   body
     nav(class=['navbar', 'is-transparent'])
       div(class='container')
         div(class='navbar-brand')
-          a(class='navbar-item', href='http://bulma.io')
+          a(class='navbar-item', href='/')
             img(src='http://bulma.io/images/bulma-logo.png', alt='Bulma: a modern CSS framework based on Flexbox', width='112', height='28')
           button(class=['button', 'navbar-burger'])
             span
@@ -21,11 +24,11 @@ html
           div(class='navbar-start')
             a(class='navbar-item', href='/')= 'HOME'
             a(class='navbar-item', href='/users')= 'USERS'
-            a(class='navbar-item', href='')= 'OTHERS'
-        a(class=['navbar-item','is-right'], href='https://github.com/jgthms/bulma')
+            a(class='navbar-item', href='')= 'ADD USER'
+        a(class=['navbar-item','is-right'], href='https://github.com/khyrulAlam/nodeapp')
           span(class='icon', style='color: #333;')
             i(class=['fa', 'fa-lg', 'fa-github'])
-          
+
     hr
 
     block content
