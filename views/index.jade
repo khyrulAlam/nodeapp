@@ -2,5 +2,27 @@ extends layout
 
 block content
   div(class='container')
-    h1(class='has-text-info')= title
-      p(class='has-text-grey-light')= 'Made By '+ author
+    div(class="columns")
+     each row in rows
+      div(class=["column", "is-half"])
+        div(class="t-box")
+          span(class="p-img")
+            img(src="http://via.placeholder.com/75x75")
+          p
+            strong(class="has-text-info")= 'Name: ' 
+            span= row.name
+          p
+            strong(class="has-text-info")= 'Email: ' 
+            span= row.email
+          p
+            strong(class="has-text-info")= 'Phone: ' 
+            span= row.phone
+          p
+            strong(class="has-text-info")= 'Company: ' 
+            span= row.company
+          p
+            strong(class="has-text-info")= 'Website: ' 
+            span= row.website
+          p
+            strong(class="has-text-info")= 'Address: ' 
+            span= row.address

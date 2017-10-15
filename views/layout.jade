@@ -24,11 +24,19 @@ html
           div(class='navbar-start')
             a(class='navbar-item', href='/')= 'HOME'
             a(class='navbar-item', href='/users')= 'USERS'
-            a(class='navbar-item', href='')= 'ADD USER'
+            a(class='navbar-item', href="/add")= 'ADD USER'
         a(class=['navbar-item','is-right'], href='https://github.com/khyrulAlam/nodeapp')
           span(class='icon', style='color: #333;')
             i(class=['fa', 'fa-lg', 'fa-github'])
 
     hr
-
+    != messages('message', locals)    
     block content
+
+
+    footer(class="footer")
+      div(class="container")
+        div(class=["content", "has-text-centered"])
+          p
+            strong= 'NodeJS Simple Curd App ' 
+            by <a href="http://khyrulalam.website" target="_blank"> Khairul Alam</a>.

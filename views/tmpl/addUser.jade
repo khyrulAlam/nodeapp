@@ -3,31 +3,31 @@ extends ../layout
 block content
   div(class='container')
     h3(class='title is-4')= title
-    form(method='post', action='/users/edit/#{row.id}')
+    form(method='post', action='/add')
       div(class='field')
         label(class="label")= "Name"
         div(class="control")
-          input(class='input', type='text', name='name', value='#{row.name}','required')
+          input(class='input', type='text', name='name','required')
       div(class='field')
         label(class="label")= "Email"
         div(class="control")
-          input(class='input', type='email', name='email', value='#{row.email}','required')
+          input(class='input', type='email', name='email','required')
       div(class='field')
         label(class="label")= "Phone"
         div(class="control")
-          input(class='input', type='number', name='phone', value='#{row.phone}','required')
+          input(class='input', type='number', name='phone','required')
       div(class='field')
         label(class="label")= "Address"
         div(class="control")
-          textarea(class='textarea',name='address','required')= row.address
+          textarea(class='textarea',name='address','required')
       div(class='field')
         label(class="label")= "Company"
         div(class="control")
-          input(class='input', type='text', name='company', value='#{row.company}','required')
+          input(class='input', type='text', name='company','required')
       div(class='field')
         label(class="label")= "Website"
         div(class="control")
-          input(class='input', type='text', name='website', value='#{row.website}','required')            
+          input(class='input', type='text', name='website','required')            
       div(class=['field', 'is-grouped'])
         div(class="control")
           button(class=["button", "is-success"])= "Submit"
@@ -36,4 +36,4 @@ block content
   
   br
   br
-  br  
+  br

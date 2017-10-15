@@ -15,4 +15,7 @@ router.post('/edit/:id', uCntr.update); //http://localhost:3000/users/edit/:id
 router.get('/delete/:id', uCntr.delete); //http://localhost:3000/users/delete/:id
 
 
+
+//router.post('/add',uCntr.add);
+
 module.exports = router;

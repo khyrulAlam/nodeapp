@@ -6,17 +6,23 @@ block content
       thead
         tr
           th= 'ID'
-          th= 'ITEM NAME'
-          th= 'SELLER ID'
-          th= 'BIDS'
+          th= 'NAME'
+          th= 'EMAIL'
+          th= 'PHONE'
+          th= 'ADDRESS'
+          th= 'COMPANY'
+          th= 'WEBSITE'
           th= 'ACTION'
       tbody
        each row in rows
         tr
           td= count++
           td= row.name
-          td= row.seller_id
-          td= row.bids
+          td= row.email
+          td= row.phone
+          td= row.address
+          td= row.company
+          td= row.website
           td
             div(class=['has-text-centered'])
               a(class='tag is-success',href='users/#{row.id}')
